@@ -1,0 +1,26 @@
+tr,
+th,
+td {
+    vertical-align: inherit;
+}
+
+#dictionary .carousel-indicators {
+    position: fixed;
+    margin: unset;
+    left: unset;
+    bottom: unset;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+}
+
+#dictionary .carousel-indicators [data-bs-target] {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    margin: 0.75rem;
+}
+
+#toastBox {
+    z-index: 99;
+}

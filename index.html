@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="none" />
+        <title>English Dictionary</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="./index.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-deparam/0.5.3/jquery-deparam.min.js"></script>
+    </head>
+
+    <body class="h-100">
+        <div id="app" class="h-100">
+            <div id="dictionary" class="carousel slide carousel-fade h-100">
+                <div class="carousel-indicators">
+                    <button
+                        class="bg-danger rounded-circle"
+                        type="button"
+                        title="Switch Clipboard"
+                        data-action="clipboard"
+                        data-bs-target
+                    ></button>
+                    <button
+                        class="bg-warning rounded-circle"
+                        type="button"
+                        title="Switch Dark Theme"
+                        data-action="darkTheme"
+                        data-bs-target
+                    ></button>
+                    <button
+                        class="bg-info rounded-circle"
+                        type="button"
+                        title="Search"
+                        data-action="search"
+                        data-bs-toggle="modal"
+                        data-bs-target="#searchBox"
+                    ></button>
+                </div>
+                <div class="carousel-inner h-100 pe-5"></div>
+            </div>
+            <div class="modal fade" id="searchBox" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header flex-wrap">
+                            <div class="input-group">
+                                <input
+                                    class="form-control"
+                                    name="word[]"
+                                    type="text"
+                                />
+                                <button
+                                    class="btn btn-info text-light fw-bold"
+                                    type="button"
+                                    data-action="addInput"
+                                >
+                                    ＋
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer justify-content-between">
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                            <button
+                                id="searchSubmit"
+                                type="button"
+                                class="btn bg-info text-light fw-bold"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                id="toastBox"
+                class="toast-container position-fixed bottom-0 end-0 me-5 mb-5"
+            >
+                <div class="toast" data-toast="clipboard">
+                    <div class="toast-header">
+                        <strong class="me-auto">👁 Copy Succeed</strong>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="toast"
+                        ></button>
+                    </div>
+                    <div class="toast-body"></div>
+                </div>
+            </div>
+        </div>
+        <script src="./index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
